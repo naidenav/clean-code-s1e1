@@ -17,7 +17,7 @@ body {
   font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
   .about {
     text-align: center;
@@ -39,14 +39,14 @@ body {
   display: flex;
 }
 ul {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 li, h3 {
-  list-style:none;
+  list-style: none;
 }
-input,button{
-  outline:none;
+input,button {
+  outline: none;
 }
 button {
   background: none;
@@ -130,7 +130,7 @@ li > .delete:hover {
 .delete img {
   height: 2em;
   transform: rotateZ(45deg);
-  transition: transform 200ms ease-in;
+  transition: 200ms ease-in;
 }
 .delete img:hover {
   transform: rotateZ(0);
@@ -144,12 +144,12 @@ li > .delete:hover {
 
 /* Edit Task */
 input[type="text"] {
-  display:none
+  display: none
 }
 .edit-mode input[type="text"] {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 .edit-mode label {
-  display:none;
+  display: none;
 }

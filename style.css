@@ -4,6 +4,15 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
+.h1 {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  height: 1px;
+  width: 1px;
+  font-size: 1px;
+  color: #f8f8f8;
+}
 .about {
   width: 500px;
   margin: 0 auto;

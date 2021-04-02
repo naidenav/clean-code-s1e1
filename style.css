@@ -4,7 +4,13 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.h1 {
+.about {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  text-align: right;
+}
+.about__h1 {
   position: absolute;
   top: -10px;
   left: -10px;
@@ -13,16 +19,10 @@ body {
   font-size: 1px;
   color: #f8f8f8;
 }
-.about {
-  width: 500px;
-  margin: 0 auto;
-  display: block;
-  text-align: right;
-}
-.about img {
+.about__img {
   width: 100%;
 }
-.more-inf {
+.about__more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -43,8 +43,21 @@ body {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
 }
-.task-row-wrapper {
+.task:focus {
+  color: #333;
+}
+.add-item__wrapper {
   display: flex;
 }
 ul {
@@ -52,14 +65,14 @@ ul {
   padding: 0px;
 }
 li, 
-h3 {
+.h3 {
   list-style: none;
 }
 input,
-button {
+.button {
   outline: none;
 }
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -83,21 +96,6 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
-  margin: 0;
-  font-size: 18px;
-  line-height: 18px;
-  height: 21px;
-  padding: 0 9px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 6px;
-  font-family: Lato, sans-serif;
-  color: #888;
-}
-input[type="text"]:focus {
-  color: #333;
-}
 
 /* New Task */
 label[for="new-task"] {
@@ -112,7 +110,7 @@ p > button:hover {
 }
 
 /* Task list */
-li {
+.li {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -120,35 +118,36 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.li > * {
   vertical-align: middle;
 }
-li > input[type="checkbox"] {
+.li > .checkbox {
   margin: 0 10px;
 }
-li > label {
+.li > .label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
+  width: 56%;
+  flex-grow: 1;
+}
+.li > .task {
   width: 226px;
 }
-li > input[type="text"] {
-  width: 226px;
-}
-li > .delete:hover {
+.li > .delete:hover {
   color: #cf2323;
 }
-.delete img {
+.remove-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: 200ms ease-in;
 }
-.delete img:hover {
+.remove-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-#completed-tasks label {
+.completed-tasks .label {
   text-decoration: line-through;
   color: #888;
 }
